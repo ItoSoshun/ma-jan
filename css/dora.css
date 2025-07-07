@@ -1,0 +1,55 @@
+/* ドラの説明ページ固有のスタイル */
+.dora-content {
+    margin-top: 30px;
+    line-height: 1.8;
+}
+
+.dora-content h2 {
+    font-family: 'Cherry Bomb One', cursive;
+    font-size: 3.2rem;
+    color: #cc0000;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.dora-content p {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.dora-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.dora-content ul {
+    list-style: disc;
+    margin-left: 25px;
+    font-size: 1.8rem;
+}
+
+.dora-content li {
+    margin-bottom: 10px;
+}
+
+.dora-content li strong {
+    color: #cc0000;
+}
+
+@media (max-width: 768px) {
+    .dora-content h2 {
+        font-size: 2.8rem;
+    }
+
+    .dora-content p,
+    .dora-content li {
+        font-size: 1.6rem;
+    }
+}

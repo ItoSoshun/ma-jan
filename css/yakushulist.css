@@ -1,0 +1,84 @@
+/* 役種一覧ページ固有のスタイル */
+.yakushu-list {
+    margin-top: 40px;
+}
+
+.yakushu-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* レスポンシブグリッド */
+    gap: 20px;
+}
+
+.yakushu-items li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.yakushu-items li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.yakushu-items li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 20px;
+}
+
+.yakushu-items li img {
+    width: 100%;
+    height: 200px; /* 画像の高さを固定 */
+    object-fit: contain; /* 画像を中央に収める */
+    margin-bottom: 15px;
+    background-color: #eee; /* 画像がない場合の背景 */
+    border-radius: 4px;
+}
+
+.yakushu-items li dl {
+    margin: 0;
+    padding: 0;
+}
+
+.yakushu-items li dt {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #cc0000;
+}
+
+.yakushu-items li dd {
+    font-size: 1.6rem;
+    color: #666;
+    margin-left: 0;
+}
+
+@media (max-width: 768px) {
+    .yakushu-items {
+        grid-template-columns: 1fr; /* 1列表示 */
+        padding: 0 10px;
+    }
+
+    .yakushu-items li a {
+        padding: 15px;
+    }
+
+    .yakushu-items li img {
+        height: 150px;
+    }
+
+    .yakushu-items li dt {
+        font-size: 2rem;
+    }
+
+    .yakushu-items li dd {
+        font-size: 1.4rem;
+    }
+}

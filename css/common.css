@@ -1,0 +1,165 @@
+/* 共通スタイル */
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding-top: 60px; /* ヘッダーの高さ分 */
+}
+
+/* ヘッダー */
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-logo img {
+    height: 40px; /* ロゴの高さ */
+}
+
+.toggle-menu-button {
+    display: none; /* デスクトップでは非表示 */
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.site-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.site-menu li {
+    margin-left: 20px;
+}
+
+.site-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.site-menu a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* メインコンテンツ */
+.main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.title h1 {
+    font-family: 'Cherry Bomb One', cursive;
+    font-size: 4.8rem;
+    color: #cc0000;
+    margin-bottom: 10px;
+}
+
+.title p {
+    font-size: 1.8rem;
+    color: #666;
+}
+
+/* フッター */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer .site-menu ul {
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    height: 30px; /* フッターロゴの高さ */
+    margin-bottom: 10px;
+}
+
+.copyright {
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .toggle-menu-button {
+        display: block; /* モバイルでは表示 */
+    }
+
+    .header-site-menu {
+        display: none; /* 初期状態では非表示 */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* ヘッダーの高さ */
+        left: 0;
+        background-color: #333;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .header-site-menu.is-show {
+        display: flex; /* JavaScriptで表示 */
+    }
+
+    .site-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .site-menu li {
+        margin: 10px 0;
+    }
+
+    .main {
+        padding: 10px;
+    }
+
+    .title h1 {
+        font-size: 3.6rem;
+    }
+
+    .title p {
+        font-size: 1.6rem;
+    }
+}

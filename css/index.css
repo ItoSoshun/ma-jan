@@ -1,0 +1,91 @@
+/* トップページ固有のスタイル */
+.first-view {
+    background-image: url('../images/common/mahjong_bg.jpg'); /* 背景画像 */
+    background-size: cover;
+    background-position: center;
+    height: 600px; /* ファーストビューの高さ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden; /* 角丸にするために必要 */
+}
+
+.first-view-text h1 {
+    font-family: 'Cherry Bomb One', cursive;
+    font-size: 6rem;
+    margin-bottom: 20px;
+}
+
+.first-view-text p {
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+}
+
+.first-view-text .lead {
+    font-size: 1.8rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* フローティングナビゲーション (トップに戻るボタンなど) */
+.floating {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+}
+
+.floating ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.floating li a {
+    display: block;
+    background-color: #cc0000;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 50%; /* 丸いボタン */
+    font-size: 1.4rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+}
+
+.floating li a:hover {
+    background-color: #990000;
+}
+
+@media (max-width: 768px) {
+    .first-view {
+        height: 400px;
+    }
+
+    .first-view-text h1 {
+        font-size: 4rem;
+    }
+
+    .first-view-text p {
+        font-size: 1.8rem;
+    }
+
+    .first-view-text .lead {
+        font-size: 1.6rem;
+    }
+
+    .floating {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .floating li a {
+        padding: 8px 12px;
+        font-size: 1.2rem;
+    }
+}

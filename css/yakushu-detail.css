@@ -1,0 +1,51 @@
+/* 役種詳細ページ固有のスタイル */
+.yakushu-content {
+    margin-top: 30px;
+    line-height: 1.8;
+}
+
+.yakushu-content h2 {
+    font-family: 'Cherry Bomb One', cursive;
+    font-size: 3.2rem;
+    color: #cc0000;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.yakushu-content p {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.yakushu-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.yakushu-content ul {
+    list-style: disc;
+    margin-left: 25px;
+    font-size: 1.8rem;
+}
+
+.yakushu-content li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .yakushu-content h2 {
+        font-size: 2.8rem;
+    }
+
+    .yakushu-content p,
+    .yakushu-content li {
+        font-size: 1.6rem;
+    }
+}
