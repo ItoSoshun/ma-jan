@@ -1,31 +1,38 @@
-/* トップページ固有のスタイル */
 .first-view {
-    background-image: url('../images/common/mahjong_bg.jpg'); /* 背景画像 */
-    background-size: cover;
-    background-position: center;
-    height: 600px; /* ファーストビューの高さ */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(10, 3, 3);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-    text-align: center;
-    border-radius: 8px;
-    overflow: hidden; /* 角丸にするために必要 */
+    position: relative; /* 子要素の絶対配置の基準にする */
+    height: 500px; /* 必要に応じて高さを設定 */
+    overflow: hidden; /* 親要素からはみ出た部分を非表示 */
+}
+
+.first-view-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* アスペクト比を保ちつつ要素を覆う */
+    z-index: -1; /* テキストの下に配置 */
+}
+
+.first-view-text {
+    text-align: center; /* ★この行を追加または確認★ */
 }
 
 .first-view-text h1 {
+    color : #CC0000;
     font-family: 'Cherry Bomb One', cursive;
-    font-size: 6rem;
+    font-size: 8rem;
     margin-bottom: 20px;
 }
 
 .first-view-text p {
+    color : #350000;
     font-size: 2.4rem;
     margin-bottom: 30px;
 }
 
 .first-view-text .lead {
+    color : #350000;
     font-size: 1.8rem;
     max-width: 600px;
     margin: 0 auto;
